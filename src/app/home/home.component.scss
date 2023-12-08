@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+.hero-section {
+    font-family: 'Montserrat', sans-serif;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    overflow: hidden;
+    perspective: 1px;
+    transform-style: preserve-3d;
+    background: url("../../assets/wave_background.jpeg") no-repeat center center;
+    background-size: cover;
+    .hero-content {
+        text-align: center;
+        max-width: 700px;
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 1.5s forwards 0.5s;
+        transition: transform 0.3s, opacity 0.3s;
+
+        &:hover {
+            transform: translateY(10px) scale(1.02);
+            opacity: 0.9;
+        }
+
+        div.intro {
+            p {
+                font-size: 1.25rem; 
+                margin-bottom: -0.5rem;
+            }
+        }
+
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 6rem; 
+            margin: 0rem;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+            font-weight: 700;
+        }
+
+        p {
+            font-size: 1.8rem; 
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        p.job-title {
+            font-size: 1.25rem;
+            margin-top: -0.5rem;
+            position: relative;
+            text-align: center;
+        
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: -5px;
+                left: 50%;
+                width: 100px;
+                height: 2px;
+                background-color: #007BFF;
+                transform: translateX(-50%);
+            }
+        }
+        
+
+        a {
+            padding: 12px 25px; 
+            border-radius: 30px;
+            font-size: 1.1rem; 
+            background-color: #fff;
+            color: #1a237e;
+            box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s, box-shadow 0.3s;
+
+            &:hover {
+                background-color: #0d47a1;
+                color: white;
+                transform: translateY(-5px) scale(1.08);
+                box-shadow: 3px 6px 18px rgba(0, 0, 0, 0.4);
+            }
+        }
+    }
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.letter {
+    display: inline-block;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    margin-right: 0.03em;
+
+}
+
+.letter:hover {
+    transform: rotate(calc(-20deg + (random() * 40deg))) scale(1.5);
+    color: #fff;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 40px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 50px; 
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    background: linear-gradient(135deg, #007BFF, #0c1653);
+
+  
+    &:hover {
+        background: linear-gradient(135deg, darken(#007BFF, 10%), darken(#1e90ff, 10%));
+        transform: scale(1.05);
+      }
+  
+    &:active {
+      background-color: darken(blue, 20%);
+      transform: scale(0.95);
+    }
+  
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px lighten(blue, 40%); 
+    }
+  }
+  

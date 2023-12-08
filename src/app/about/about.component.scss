@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Slab:wght@700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: url("../../assets/wave_background.jpeg") no-repeat center center;
+    background-size: cover;
+    display: flex;
+    margin: 0;
+    padding: 3vh;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    max-width: 800px;
+    background-color: rgba(4, 8, 231, 0.119);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.8);
+    color: #fff;
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    .profile-pic {
+        max-width: 150px;
+        border-radius: 50%;
+        margin-right: 1.5rem;
+    }
+
+    h1 {
+        font-family: 'Roboto Slab', serif;
+        font-size: 2rem;
+        color: #fff;
+        margin-bottom: 0.2rem;
+    }
+
+    .subtitle {
+        font-weight: 500;
+        color: #c5cae9;
+        margin-top: 0.2rem;
+    }
+}
+
+.info-section {
+    h2 {
+        font-family: 'Roboto Slab', serif;
+        font-size: 1.8rem;
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin-top: 1rem;
+        color: #c5cae9; 
+    }
+
+    ul {
+        list-style-type: disc;
+        list-style-position: inside;
+        font-size: 1.1rem;
+        color: #c5cae9; 
+        margin-top: 1rem;
+        padding-left: 1.5rem;
+        
+        li {
+            margin-bottom: 0.5rem;
+        }
+    }
+    
+    .resume-btn {
+        display: inline-block;
+        margin-top: 2rem;
+        padding: 10px 20px;
+        border-radius: 5px;
+        background: linear-gradient(135deg, #007BFF, #0056b3);
+        color: white;
+        text-decoration: none;
+        border: none;
+        cursor: pointer;
+        transition: background 0.3s, transform 0.2s;
+    
+        &:hover {
+            background: linear-gradient(135deg, #0056b3, #003c7a);
+            transform: translateY(-2px);
+        }
+    
+        &:active {
+            transform: translateY(1px);
+        }
+    }    
+}
